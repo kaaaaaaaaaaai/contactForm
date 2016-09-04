@@ -17,7 +17,10 @@ class ContactController extends Controller
     public function confirm(Request $req){
         //もしvalidateが通らなかったら自動で前のページにvalidateErrorを持ってリダイレクトする
         $this->validate($req,[
-            'name' =>  'required'
+            'name'      =>  'required|max:255',
+            'gender'    =>  'required',
+            'comment'   =>  'max:255',
+            'email'     =>  'email'
         ]);
         $_data = $req->all();
 
