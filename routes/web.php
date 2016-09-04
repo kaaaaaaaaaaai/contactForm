@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix'   =>  'contact'], function(){
-    Route::get('input', 'ContactController@input');
-    Route::post('confirm', 'ContactController@confirm');
+    Route::get('input',     'ContactController@input');
+    Route::post('confirm',  'ContactController@confirm');
+    Route::post('store',    'ContactController@store');
 });
