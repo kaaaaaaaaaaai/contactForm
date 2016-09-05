@@ -20,7 +20,7 @@ class ContactController extends Controller
             'name'      =>  'required|max:255',
             'gender'    =>  'required',
             'comment'   =>  'max:255',
-            'email'     =>  'email'
+            'email'     =>  'required|email',
         ]);
         $_data = $req->all();
 
@@ -30,13 +30,18 @@ class ContactController extends Controller
     }
 
     public function store(Request $req){
-
-        var_dump($req->Session()->get('data'));
-        $data = [];
-        Mail::send('contact.thanksPage', $data, function($message){
+        /*
+         Mail::send('contact.thanksPage', $data, function($message){
             $message->to('kai-ogita@rich.co.jp')
-                ->subject('ここがタイトルです');
+                ->subject('問い合わせ');
+        });*/
+
+        Mail::raw("Mail test dev ogita", function($message){
+            $message->to('kaiogita@gmail.com')
+                ->subject('test');
         });
+
+
         //return view('contact.thanksPage');
     }
 }

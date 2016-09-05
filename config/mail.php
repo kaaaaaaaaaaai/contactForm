@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', null),
+        'address' => env('MAIL_FROM_ADDRESS', 'kaiogita@gmail.com'),
         'name' => env('MAIL_FROM_NAME', null)
     ],
 
@@ -98,8 +98,8 @@ return [
     |
     */
 
-    //'password' => env('MAIL_PASSWORD'),
-    'password' => 'ogi11105432',
+    'password' => env('MAIL_PASSWORD'),
+    //'password' => 'zdnjlrgwgssseivg',
 
     /*
     |--------------------------------------------------------------------------

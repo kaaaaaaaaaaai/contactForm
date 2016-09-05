@@ -9,8 +9,8 @@ input
         <input type="text" name="name" value="{{old('name')}}">
     </div>
     <div class="form-group">
-        <input id="men" name="gender" type="radio" value="男"><label for="men">男</label>
-        <input id="women" name="gender" type="radio" value="女"><label for="women">女</label>
+        <input name="gender" type="radio" value="men"><label for="men">男</label>
+        <input name="gender" type="radio" value="women"><label for="women">女</label>
     </div>
     <div class="form-group">
         <label>コメント</label>
