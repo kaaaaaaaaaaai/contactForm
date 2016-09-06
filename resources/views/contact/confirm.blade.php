@@ -18,5 +18,6 @@ confirm
         <label>E-Mail</label>
         {{$data['email']}}
     </div>
-    <input type="submit" value="登録">
+    <input type="submit"  value="register" name='action'></input>
+    <input type="submit"  value="back" name='action'></input>
 </form>
